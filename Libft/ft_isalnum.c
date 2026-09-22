@@ -12,7 +12,20 @@
 
 #include "libft.h"
 
+/*
+Checks if a character is a letter or a number.
+It uses ft_isalpha and ft_isdigit to check.
+Returns 1 if true, 0 if false.
+*/
+
 int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+/*
+int main(void) {
+    printf(ft_isalnum('A'));
+    printf(ft_isalnum('-'));
+    return (0);
+}
+*/

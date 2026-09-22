@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Compares two memory areas byte by byte up to x bytes.
+If it finds a difference, it returns the difference between the two.
+If both areas are equal, it returns 0.
+*/
+
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	size_t	i;
@@ -27,3 +33,9 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
+/*
+int main(void) {
+    printf(ft_memcmp("abc", "abz", 3));
+    return (0);
+}
+*/

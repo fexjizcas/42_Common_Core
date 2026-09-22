@@ -10,7 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libtf.h"
+#include "libft.h"
+
+/*
+Searches for a small string inside a big string.
+Only searches up to x characters.
+Returns a pointer to the start of the found string.
+*/
 
 char	*ft_strnstr(const char *big, const char *lil, size_t len)
 {
@@ -23,6 +29,7 @@ char	*ft_strnstr(const char *big, const char *lil, size_t len)
 		return ((char *)big);
 	while (big[h])
 	{
+		n = 0;
 		while (big[h + n] == lil[n] && (h + n) < len)
 		{
 			if (big[h + n] == '\0' && lil[n] == '\0')
@@ -35,3 +42,10 @@ char	*ft_strnstr(const char *big, const char *lil, size_t len)
 	}
 	return (0);
 }
+/*
+int main(void) {
+    char *big = "Buscando la aguja en el pajar";
+    printf(ft_strnstr(big, "aguja", 20));
+    return (0);
+}
+*/

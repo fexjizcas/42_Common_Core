@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Joins two strings safely.
+Copies the source string to the end of the destination string.
+It always puts a \0 at the end to prevent overflow.
+*/
+
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	dest_len;
@@ -33,3 +39,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[dest_len + i] = '\0';
 	return (dest_len + src_len);
 }
+/*
+int main(void) {
+    char dest[20] = "Hola ";
+    ft_strlcat(dest, "Mundo", 20);
+    printf("%s\n", dest);
+    return (0);
+}
+*/

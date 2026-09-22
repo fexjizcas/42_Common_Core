@@ -12,7 +12,20 @@
 
 #include "libft.h"
 
+/*
+Sets a specific amount of bytes in memory to zero.
+It calls ft_memset and passes 0 as the value.
+*/
+
 void	ft_bzero(void *ptr, size_t n)
 {
 	ft_memset(ptr, 0, n);
 }
+/*
+int main(void) {
+    char str[] = "12345";
+    ft_bzero(str, 2);
+    printf(str[2]);
+    return (0);
+}
+*/

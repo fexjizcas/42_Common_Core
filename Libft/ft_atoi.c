@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Converts a string of characters into an integer number.
+First, it skips spaces. Then, it checks for a '+' or '-' sign.
+Finally, it reads the numbers and calculates the total value.
+*/
+
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -34,3 +40,9 @@ int	ft_atoi(const char *str)
 	}
 	return (sign * num);
 }
+/*
+int main(void) {
+    printf(ft_atoi("  -4242"));
+    return (0);
+}
+*/

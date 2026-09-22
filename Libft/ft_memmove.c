@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Copies memory like ft_memcpy, but it is safe for overlapping memory areas.
+If destination is after source, it copies backwards.
+Otherwise, it copies forwards using ft_memcpy.
+*/
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
@@ -35,3 +41,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+/*
+int main(void) {
+    char str[] = "0123456789";
+    // Solapamiento: movemos "01234" a la posición del "2"
+    ft_memmove(str + 2, str, 5);
+    printf(str);
+    return (0);
+}
+*/

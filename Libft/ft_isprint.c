@@ -12,6 +12,11 @@
 
 #include "libft.h"
 
+/*
+Checks if a character is printable.
+Returns 1 if the value is between 32 and 126, and 0 if not.
+*/
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
@@ -19,3 +24,10 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
+/*
+int main(void) {
+    printf(ft_isprint(' '));
+    printf(ft_isprint(10));
+    return (0);
+}
+*/

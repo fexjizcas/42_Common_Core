@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Searches for the last time a character appears in a string.
+Starts from the end of the string using strlen and moves backwards.
+Returns a pointer to the character
+*/
+
 char	*ft_strrchr(const char *str, int a)
 {
 	int	i;
@@ -25,3 +31,19 @@ char	*ft_strrchr(const char *str, int a)
 	}
 	return (0);
 }
+/*
+int main(void) 
+{
+    char *str = "Hola Mundo";
+    char *res;
+
+    res = ft_strrchr(str, 'M');
+    
+    if (res)
+        printf(str, res);
+    else
+        printf("Carácter no encontrado.\n");
+        
+    return (0);
+}
+*/

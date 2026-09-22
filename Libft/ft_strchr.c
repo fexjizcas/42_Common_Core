@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Searches for the first time a character appears in a string.
+Goes through the string until it finds the character. 
+Returns a pointer to the character, then a control if user looking for the end of the str.
+*/
+
 char	*ft_strchr(const char *str, int a)
 {
 	int	i;
@@ -29,3 +35,10 @@ char	*ft_strchr(const char *str, int a)
 	}
 	return (0);
 }
+/*
+int main(void) {
+    char *str = "Hola Mundo";
+    printf(ft_strchr(str, 'M'));
+    return (0);
+}
+*/

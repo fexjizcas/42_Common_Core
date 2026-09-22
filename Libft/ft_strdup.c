@@ -31,3 +31,13 @@ void	*ft_strdup(void *str)
 	ft_memcpy(dup, str, (size + 1));
 	return (dup);
 }
+/*
+int main(void) {
+    char *dup = ft_strdup("Esta es una cadena duplicada");
+    if (dup) {
+        printf(dup);
+        free(dup);
+    }
+    return (0);
+}
+*/

@@ -12,6 +12,12 @@
 
 #include "libft.h"
 
+/*
+Copies a string to a destination safely.
+Copies up to 'size - 1' characters and always adds a \0.
+Returns the length of the source string.
+*/
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
@@ -31,3 +37,11 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (src_len);
 }
+/*
+int main(void) {
+    char dest[20];
+    ft_strlcpy(dest, "Copiando texto", 20);
+    printf(dest);
+    return (0);
+}
+*/
