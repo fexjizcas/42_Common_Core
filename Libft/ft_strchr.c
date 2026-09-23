@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:17:18 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/21 16:58:33 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/23 11:26:25 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 /*
 Searches for the first time a character appears in a string.
 Goes through the string until it finds the character. 
-Returns a pointer to the character, then a control if user looking for the end of the str.
+Returns a pointer to the character, 
+then a control if user looking for the end of the str.
 */
 
 char	*ft_strchr(const char *str, int a)

@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 15:27:31 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/21 15:43:30 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/23 11:15:02 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,11 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (dest_len + src_len);
 }
 /*
-int main(void) {
-    char dest[20] = "Hola ";
-    ft_strlcat(dest, "Mundo", 20);
-    printf("%s\n", dest);
-    return (0);
+int	main(void) 
+{
+	char dest[20] = "Hola ";
+	ft_strlcat(dest, "Mundo", 20);
+	printf("%s\n", dest);
+	return (0);
 }
 */
