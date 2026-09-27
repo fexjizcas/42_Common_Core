@@ -20,6 +20,18 @@ t_list	*ft_lstnew(void *content)
 	if (new_node == NULL)
 		return (NULL);
 	new_node -> content = content;
-	new node -> next = NULL;
+	new node->next = NULL;
 	return (new_node);
+}
+
+int main(void)
+{
+    t_list *node = ft_lstnew("Primer nodo");
+    
+    if (node)
+    {
+        printf("%s\n", (char *)node->content);
+        free(node);
+    }
+    return (0);
 }

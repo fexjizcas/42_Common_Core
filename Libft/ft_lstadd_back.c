@@ -1,0 +1,32 @@
+
+#include "libft.h"
+
+void ft_lstadd_back(t_list **lst, t_list *new)
+{
+    t_list	*tmp;
+
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = ft_lstlast(*lst);
+	tmp -> next = new;
+}
+
+int main(void)
+{
+    t_list *lista = ft_lstnew("Inicio");
+    t_list *nuevo_final = ft_lstnew("Final");
+    
+    ft_lstadd_back(&lista, nuevo_final);
+    
+    printf("Primero: %s\n", (char *)lista->content);
+    printf("Último: %s\n", (char *)lista->next->content);
+    
+    free(lista->next);
+    free(lista);
+    return (0);
+}
