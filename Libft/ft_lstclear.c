@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/28 11:00:28 by fejimene          #+#    #+#             */
+/*   Updated: 2026/09/28 11:40:28 by fejimene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-    t_list	*tmp;
+	t_list	*tmp;
 
 	if (!lst)
 		return ;
@@ -15,7 +26,7 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
-
+/*
 int main(void)
 {
     t_list *lista = ft_lstnew(malloc(10));
@@ -27,3 +38,4 @@ int main(void)
         printf("Lista vaciada a NULL correctamente.\n");
     return (0);
 }
+*/

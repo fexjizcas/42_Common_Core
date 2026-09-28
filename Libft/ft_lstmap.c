@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/28 11:20:43 by fejimene          #+#    #+#             */
+/*   Updated: 2026/09/28 11:39:57 by fejimene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list	*newlst;
+	t_list	*newlst;
 	t_list	*node;
 
 	if (!lst)
@@ -26,9 +37,10 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlst);
 }
-
+/*
 void *f_mini(void *content) {
-    return ("NUEVO"); 
+    (void)content;
+	return ("NUEVO"); 
 }
 
 int main(void)
@@ -36,11 +48,10 @@ int main(void)
     t_list *lista = ft_lstnew("Uno");
     ft_lstadd_back(&lista, ft_lstnew("Dos"));
     
-    // Pasamos f_mini para transformar, y NULL para no borrar nada si falla
     t_list *nueva = ft_lstmap(lista, f_mini, NULL);
-    
     printf("1: %s\n", (char *)nueva->content);
     printf("2: %s\n", (char *)nueva->next->content);
     
     return (0);
 }
+*/

@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/28 10:19:28 by fejimene          #+#    #+#             */
+/*   Updated: 2026/09/28 11:41:06 by fejimene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-    unsigned int	i;
+	unsigned int	i;
 
 	i = 0;
 	while (lst)
@@ -13,12 +24,12 @@ unsigned int ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
-
+/*
 int main(void)
 {
     t_list *lista = ft_lstnew("1");
-    ft_lstadd_back(&lista, ft_lstnew("2"));
-    ft_lstadd_back(&lista, ft_lstnew("3"));
+    lista -> next = ft_lstnew("2");
+    lista -> next -> next = ft_lstnew("3");
     
     printf("Tamaño de la lista: %u\n", ft_lstsize(lista));
     free(lista->next->next);
@@ -26,3 +37,4 @@ int main(void)
     free(lista);
     return (0);
 }
+*/
