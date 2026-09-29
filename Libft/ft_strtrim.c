@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 11:30:55 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/23 13:04:48 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:48:30 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
+	if (s1 == NULL || set == NULL)
+		return (NULL);
 	while (s1[start] && ft_strchr(set, s1[start]))
 	{
 		start++;
 	}
-	while (s1[end] && ft_strchr(set, s1[end]))
+	if (start == end)
+		return (ft_strdup(""));
+	while (end > start && ft_strchr(set, s1[end - 1]))
 	{
 		end--;
 	}
-	res = ft_substr(s1, start, end);
+	res = ft_substr(s1, start, (end - start));
 	return (res);
 }
 /*

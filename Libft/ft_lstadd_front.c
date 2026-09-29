@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:57:05 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/28 11:37:26 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 12:17:20 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new -> next = *lst;
 	*lst = new;
 }

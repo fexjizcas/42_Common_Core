@@ -6,12 +6,12 @@
 #    By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/28 12:40:43 by fejimene          #+#    #+#              #
-#    Updated: 2026/09/28 12:46:26 by fejimene         ###   ########.fr        #
+#    Updated: 2026/09/29 09:49:38 by fejimene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 RM = rm -f
 SRC = ft_isalpha \
@@ -47,7 +47,7 @@ SRC = ft_isalpha \
 	ft_putchar_fd \
 	ft_putstr_fd \
 	ft_putendl_fd \
-	ft_putnbr_fd
+	ft_putnbr_fd \
 	ft_lstnew \
 	ft_lstadd_front \
 	ft_lstsize \
@@ -60,5 +60,18 @@ SRC = ft_isalpha \
 
 SRCS = $(addsuffix .c, $(SRC))
 OBJS = $(addsuffix .o, $(SRC))
-
-
+# Main
+all: $(NAME);
+# Create the static library
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
+# Remove .o
+clean:
+	$(RM) $(OBJS)
+# Remove .o and libft.a
+fclean: clean
+	$(RM) $(NAME)
+# Recompile
+re: fclean all
+# Prevent conflict
+.PHONY: all clean fclean re

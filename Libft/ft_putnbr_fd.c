@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 15:56:13 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/24 16:15:26 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:35:25 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
+		return ;
 	}
 	if (n < 0)
 	{

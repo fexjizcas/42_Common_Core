@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 13:11:33 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/25 12:43:46 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:54:56 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Then in the main function, split a string into an array of strings,
 using a given character as a delimiter. 
 */
 
-int	ft_count(char const *s, char c)
+static int	ft_count(char const *s, char c)
 {
 	size_t	count;
 	int		i;
@@ -39,6 +39,30 @@ int	ft_count(char const *s, char c)
 	return (count);
 }
 
+static void	ft_fill_split(char const *s, char c, char **res)
+{
+	int	i;
+	int	start;
+	int	j;
+
+	i = 0;
+	start = 0;
+	j = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		if (s[i] == '\0')
+			break ;
+		start = i;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+		res[j] = ft_substr(s, start, i - start);
+		j++;
+	}
+	res[j] = NULL;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -54,17 +78,7 @@ char	**ft_split(char const *s, char c)
 	res = malloc(sizeof (char *) * (ft_count(s, c) + 1));
 	if (res == NULL)
 		return (NULL);
-	while (s[i] != '\0')
-	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		start = i;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		res[j] = ft_substr(s, start, i - start);
-		j++;
-	}
-	res[j] = NULL;
+	ft_fill_split(s, c, res);
 	return (res);
 }
 /*

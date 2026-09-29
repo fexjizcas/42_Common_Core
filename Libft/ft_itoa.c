@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 13:20:43 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/24 12:32:58 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:54:35 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Creates the str, in last position add \0 and if negatives in 0 the simbol.
 Finnaly add the numbers inversive.
 */
 
-int	ft_count(int num)
+static int	ft_count(int num)
 {
 	int	i;
 

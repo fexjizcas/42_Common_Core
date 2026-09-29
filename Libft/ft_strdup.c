@@ -19,7 +19,7 @@ sending the size + 1 for the \0,
 error control and then copy de original into the dup with memcpy.
 */
 
-void	*ft_strdup(void *str)
+char	*ft_strdup(void *str)
 {
 	char	*dup;
 	size_t	size;

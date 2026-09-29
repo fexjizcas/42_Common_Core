@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 10:58:11 by fejimene          #+#    #+#             */
-/*   Updated: 2026/09/22 12:59:47 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:36:31 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*str;
 
+	if (count != 0 && (count * size) / count != size)
+		return (NULL);
 	str = malloc(count * size);
 	if (str == NULL)
 		return (NULL);

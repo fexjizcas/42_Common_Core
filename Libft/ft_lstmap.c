@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlst;
 	t_list	*node;
 
-	if (!lst)
+	if (!lst || !f)
 		return (NULL);
 	newlst = NULL;
 	node = NULL;
