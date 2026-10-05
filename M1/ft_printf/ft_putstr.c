@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/05 11:14:57 by fejimene          #+#    #+#             */
+/*   Updated: 2026/10/05 11:31:37 by fejimene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_putstr_fd(char *s)
+#include "printf.h"
+
+int	ft_putstr(char *s)
 {
 	int	i;
 
@@ -9,4 +22,5 @@ int	ft_putstr_fd(char *s)
 		ft_putchar(s[i]);
 		i++;
 	}
+	return (i);
 }

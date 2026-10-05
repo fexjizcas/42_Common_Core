@@ -6,9 +6,11 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 12:55:43 by fejimene          #+#    #+#             */
-/*   Updated: 2026/10/01 11:15:26 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/10/05 11:33:30 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "printf.h"
 
 int	ft_printf(char const *str, ...)
 {
