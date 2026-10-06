@@ -12,11 +12,13 @@
 
 #include "printf.h"
 
-int	ft_putptr(unsigned long nb)
+int	ft_putptr(void *ptr)
 {
 	int	i;
+	unsigned long nb;
 
 	i = 0;
+	nb = (unsigned long)ptr;
 	if (!nb)
 		return (write(1, "(nil)", 5));
 	i = i + ft_putstr("0x");

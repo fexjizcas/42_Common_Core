@@ -35,8 +35,13 @@ clean:
 	$(RM) $(OBJS)
 # Remove .o and libft.a
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) test_printf
 # Recompile
 re: fclean all
+
+test: $(NAME)
+	$(CC) $(CFLAGS) main.c $(NAME) -o test_printf
+	./test_printf
+
 # Prevent conflict
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re test

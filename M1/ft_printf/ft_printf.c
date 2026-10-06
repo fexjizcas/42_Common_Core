@@ -20,14 +20,18 @@ int	ft_printf(char const *str, ...)
 
 	va_start(args, str);
 	i = 0;
+	check = 0;
 	if (!str)
 		return (-1);
 	while (str[i])
 	{
-		if (str[i] == "%" && str[i + 1] != '\0')
-			check = ft_conver(str[i++], args);
+		if (str[i] == '%' && str[i + 1] != '\0')
+		{
+			check = check + ft_conver(str[i + 1], args);
+			i++;
+		}
 		else
-			check = ft_putchar(str[i]);
+			check = check + ft_putchar(str[i]);
 		if (check == -1)
 		{
 			va_end(args);
