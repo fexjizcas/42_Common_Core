@@ -6,17 +6,22 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 11:14:57 by fejimene          #+#    #+#             */
-/*   Updated: 2026/10/05 11:31:37 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/10/06 11:14:24 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {
 	int	i;
 
 	i = 0;
+	if (!s)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (s[i] != '\0')
 	{
 		ft_putchar(s[i]);

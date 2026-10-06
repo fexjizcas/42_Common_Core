@@ -6,16 +6,16 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 11:14:42 by fejimene          #+#    #+#             */
-/*   Updated: 2026/10/05 11:30:30 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/10/06 10:18:41 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putptr(void *ptr)
 {
-	int	i;
-	unsigned long nb;
+	int				i;
+	unsigned long	nb;
 
 	i = 0;
 	nb = (unsigned long)ptr;

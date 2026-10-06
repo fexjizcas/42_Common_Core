@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_conver(char const str, va_list args)
 {
@@ -27,9 +27,9 @@ int	ft_conver(char const str, va_list args)
 	else if (str == 'u')
 		return (ft_putunbr(va_arg(args, unsigned int)));
 	else if (str == 'x')
-		return (ft_puthex(va_arg(args, unsigned long), 'x'));
+		return (ft_puthex(va_arg(args, unsigned int), 'x'));
 	else if (str == 'X')
-		return (ft_puthex(va_arg(args, unsigned long), 'X'));
+		return (ft_puthex(va_arg(args, unsigned int), 'X'));
 	else if (str == '%')
 		return (ft_putchar('%'));
 	return (0);
