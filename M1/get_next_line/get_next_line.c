@@ -21,7 +21,7 @@ char	*ft_read(int fd, char *buffer)
 	if (res == NULL)
 		return (NULL);
 	byte_read = 1;
-	while (!ft_strchr(buffer, '\n') && bytes_read != 0)
+	while (!ft_strchr(buffer, '\n') && byte_read != 0)
 	{
 		byte_read = read (fd, res, BUFFER_SIZE);
 		if (byte_read == -1)
@@ -38,7 +38,56 @@ char	*ft_read(int fd, char *buffer)
 
 char	*ft_line(char *buffer)
 {
+	char	*line;
+	int		i;
 
+	i = 0;
+	if (!buffer)
+		return (NULL);
+	while (buffer[i] && buffer[i] != '\n')
+		i++;
+	line = malloc(sizeof (char) * (i + 2));
+	if (line == NULL)
+		return (NULL);
+	i = 0;
+	while (buffer[i] && buffer[i] != '\n')
+	{
+		line[i] = buffer[i];
+		i++;
+	}
+	if (buffer[i] == '\n')
+		line[i] = buffer[i];
+	line[i] = '\0';
+	return (line);
+}
+
+char	*ft_clean(char *buffer, char *line)
+{
+	int		i;
+	char	*new_buffer;
+	int		len;
+	int		j;
+	
+	j = 0;
+	i = ft_strlen(line);
+	len = ft_strlen(buffer) - ft_strlen(line);
+	if (len == 0)
+	{
+		free (buffer);
+		return (NULL);
+	}
+	new_buffer = malloc(sizeof (char) * (len + 1));
+	if (new_buffer == NULL)
+		return (NULL);
+	while (buffer[i])
+	{
+		new_buffer[j] = buffer[i];
+		i++;
+		j++;
+	}
+	new_buffer[j] = '\0';
+	free (buffer);
+	return (new_buffer);
 }
 
 char	*get_next_line(int fd)
@@ -52,5 +101,6 @@ char	*get_next_line(int fd)
 	if (!buffer)
 		return (NULL);
 	line = ft_line(buffer);
+	buffer = ft_clean(buffer, line);
 	return (line);
 }
