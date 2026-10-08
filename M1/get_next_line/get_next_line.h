@@ -24,3 +24,7 @@ char	*ft_clean(char *buffer, char *line);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *str, int a);
 size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
+
+#endif
