@@ -33,7 +33,7 @@ char	*ft_read(int fd, char *buffer)
 		buffer = malloc(1);
 		buffer[0] = '\0';
 	}
-	while (!ft_strchr(buffer, '\n') && byte_read != 0)
+	while (buffer && !ft_strchr(buffer, '\n') && byte_read != 0)
 	{
 		byte_read = read (fd, res, BUFFER_SIZE);
 		if (byte_read == -1)
@@ -42,6 +42,8 @@ char	*ft_read(int fd, char *buffer)
 		buffer = ft_strjoin(buffer, res);
 	}
 	free (res);
+	if (!buffer || buffer[0] == '\0')
+		return (ft_free_and_null(NULL, buffer));
 	return (buffer);
 }
 
@@ -110,11 +112,8 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buffer = ft_read(fd, buffer);
-	if (!buffer || buffer[0] == '\0')
-	{
-		free(buffer);
+	if (!buffer)
 		return (NULL);
-	}
 	line = ft_line(buffer);
 	buffer = ft_clean(buffer, line);
 	return (line);

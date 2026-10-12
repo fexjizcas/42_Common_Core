@@ -1,6 +1,0 @@
-Hola, esta es una linea normal.
-Esta es otra linea normal pero un poco mas larga para probar.
-
-La linea de arriba esta vacia (solo tiene un \n).
-12345
-Esta es la ultima linea y no le pondremos salto de linea al final
