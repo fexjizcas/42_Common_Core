@@ -6,29 +6,38 @@
 /*   By: fejimene <fejimene@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 11:48:24 by fejimene          #+#    #+#             */
-/*   Updated: 2026/10/06 11:50:50 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/10/12 10:02:30 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+char	*ft_free_and_null(char *res, char *buffer)
+{
+	free(res);
+	free(buffer);
+	return (NULL);
+}
 
 char	*ft_read(int fd, char *buffer)
 {
 	char	*res;
 	int		byte_read;
 
-	res = malloc(sizeof (char) * BUFFER_SIZE + 1);
+	res = malloc(sizeof (char) * (BUFFER_SIZE + 1));
 	if (res == NULL)
 		return (NULL);
 	byte_read = 1;
+	if (!buffer)
+	{
+		buffer = malloc(1);
+		buffer[0] = '\0';
+	}
 	while (!ft_strchr(buffer, '\n') && byte_read != 0)
 	{
 		byte_read = read (fd, res, BUFFER_SIZE);
 		if (byte_read == -1)
-		{
-			free (res);
-			return (NULL);
-		}
+			return (ft_free_and_null(res, buffer));
 		res[byte_read] = '\0';
 		buffer = ft_strjoin(buffer, res);
 	}
@@ -56,7 +65,10 @@ char	*ft_line(char *buffer)
 		i++;
 	}
 	if (buffer[i] == '\n')
+	{
 		line[i] = buffer[i];
+		i++;
+	}
 	line[i] = '\0';
 	return (line);
 }
@@ -67,7 +79,7 @@ char	*ft_clean(char *buffer, char *line)
 	char	*new_buffer;
 	int		len;
 	int		j;
-	
+
 	j = 0;
 	i = ft_strlen(line);
 	len = ft_strlen(buffer) - ft_strlen(line);
@@ -98,8 +110,11 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buffer = ft_read(fd, buffer);
-	if (!buffer)
+	if (!buffer || buffer[0] == '\0')
+	{
+		free(buffer);
 		return (NULL);
+	}
 	line = ft_line(buffer);
 	buffer = ft_clean(buffer, line);
 	return (line);
