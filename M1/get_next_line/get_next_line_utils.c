@@ -22,7 +22,10 @@ char	*ft_strjoin(char *s1, char *s2)
 	len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	str = malloc(sizeof(char) * len);
 	if (str == NULL)
+	{
+		free(s1);
 		return (NULL);
+	}
 	ft_strlcpy(str, s1, len);
 	ft_strlcat(str, s2, len);
 	free (s1);
