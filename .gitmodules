@@ -1,0 +1,3 @@
+[submodule "M1/push_swap"]
+	path = M1/push_swap
+	url = https://github.com/jonamunozjim/push_swap.git
