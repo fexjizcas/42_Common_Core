@@ -6,7 +6,7 @@
 /*   By: fejimene <fejimene@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 13:11:33 by fejimene          #+#    #+#             */
-/*   Updated: 2026/10/23 11:19:38 by fejimene         ###   ########.fr       */
+/*   Updated: 2026/10/28 09:55:50 by fejimene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,8 @@ char	**ft_split(char const *s, char c)
 {
 	char	**res;
 	int		i;
-	int		start;
-	int		j;
 
 	i = 0;
-	start = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
 	res = malloc(sizeof (char *) * (ft_count(s, c) + 1));
