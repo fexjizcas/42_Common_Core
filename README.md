@@ -1,3 +1,11 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="42_white.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg">
+    <img alt="42 Logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" width="80">
+  </picture>
+</div>
+
 # 42 Cursus - Software Engineering Portfolio
 
 Este repositorio actúa como el índice central de mi progreso a través del programa de 42. El currículo destaca por su metodología basada íntegramente en el aprendizaje por proyectos (Project-Based Learning), la evaluación entre pares (Peer-to-Peer) y la resolución autónoma de problemas técnicos complejos.
