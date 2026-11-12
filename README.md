@@ -6,7 +6,9 @@
   </picture>
 </div>
 
-# 42 Cursus - Software Engineering Portfolio
+# 42 Cursus
+
+*Estos proyectos han sido creados como parte del currículo de 42 por fejimene.*
 
 Este repositorio actúa como el índice central de mi progreso a través del programa de 42. El currículo destaca por su metodología basada íntegramente en el aprendizaje por proyectos (Project-Based Learning), la evaluación entre pares (Peer-to-Peer) y la resolución autónoma de problemas técnicos complejos.
 
@@ -39,3 +41,7 @@ Para mantener la raíz del repositorio estructurada, la información técnica es
 *   **Documentación Individual:** Cada subdirectorio contiene su propio archivo `README.md` con las especificaciones del reto, el enfoque de resolución y notas de la evaluación.
 *   **Compilación:** Todo proyecto en C incluye su respectivo `Makefile` estandarizado. Proporciona siempre las reglas base (`make`, `clean`, `fclean`, `re`) para una compilación segura.
 *   **Gestión de Dependencias Grupales:** Algunos proyectos de 42 se desarrollan en equipo. Para mantener el historial de *commits* original y el trabajo individual, estos se enlazan en este repositorio general mediante submódulos de Git (visibles en el archivo `.gitmodules`).
+
+## Autor
+
+- [Félix Jiménez](https://github.com/fexjizcas)
