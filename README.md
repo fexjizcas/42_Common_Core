@@ -12,7 +12,7 @@
 
 Este repositorio actúa como el índice central de mi progreso a través del programa de 42. El currículo destaca por su metodología basada íntegramente en el aprendizaje por proyectos (Project-Based Learning), la evaluación entre pares (Peer-to-Peer) y la resolución autónoma de problemas técnicos complejos.
 
->⚠️ **Nota importante:** Work In Progress: Este repositorio es un proyecto vivo y no definitivo. Su estructura y contenido irán cambiando, evolucionando y ampliándose a medida que se avanza en los distintos Milestones del programa.
+>⚠️ **Nota importante (Work In Progress):** Este repositorio es un proyecto vivo y no definitivo. Su estructura y contenido irán cambiando, evolucionando y ampliándose a medida que se avanza en los distintos Milestones del programa.
 
 ## Arquitectura del Repositorio
 
