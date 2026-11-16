@@ -18,12 +18,71 @@ Este repositorio actúa como el índice central de mi progreso a través del pro
 
 El directorio está estructurado de manera modular, dividiendo los entregables por niveles de dificultad (*Milestones*) y bibliotecas de uso general.
 
-| Directorio | Nivel | Estado | Descripción | Lenguaje | 
-| ----- | ----- | ----- | ----- | ----- | 
-| [**`📁 Libft/`**](./Libft) | `M0` | ✅ Terminado | Desarrollo desde cero de una biblioteca estática. Recrea funciones de la `libc` y establece bases de memoria y punteros. | C | 
-| [**`📁 M1/`**](./M1) | `M1` | ✅ Terminado | Proyectos orientados a la optimización, algoritmos y gráficos. *(Incluye submódulos gestionados vía `.gitmodules`)*. | C | 
-| [**`📁 M2/`**](./M2) | `M2` | 🔄 En curso | Introducción a nuevos paradigmas y POO. Actualmente contiene los avances de `Python_Module_00` y `Python_Module_01`. | Python | 
-| [**`📁 Super_libft/`**](./Super_libft) | `Core` | Evolutivo | Biblioteca personal expandida. Integra componentes superados para maximizar la modularidad en futuras entregas. | C | 
+<table>
+  <thead>
+    <tr>
+      <th align="center">Nivel</th>
+      <th align="left">Proyecto</th>
+      <th align="center">Estado</th>
+      <th align="left">Conceptos Clave</th>
+      <th align="center">Lenguaje</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center" valign="middle"><kbd>M0</kbd></td>
+      <td align="left"><a href="./Libft"><strong>Libft</strong></a></td>
+      <td align="center">🟢 Completado</td>
+      <td align="left">Memoria dinámica, punteros, listas enlazadas</td>
+      <td align="center">C</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle" rowspan="3"><kbd>M1</kbd></td>
+      <td align="left"><a href="./M1/ft_printf"><strong>ft_printf</strong></a></td>
+      <td align="center">🟢 Completado</td>
+      <td align="left">Funciones variádicas, formateo y parsing</td>
+      <td align="center">C</td>
+    </tr>
+    <tr>
+      <td align="left"><a href="./M1/get_next_line"><strong>get_next_line</strong></a></td>
+      <td align="center">🟢 Completado</td>
+      <td align="left">Descriptores de archivo (FD), variables estáticas</td>
+      <td align="center">C</td>
+    </tr>
+    <tr>
+      <td align="left"><a href="./M1/push_swap"><strong>push_swap</strong></a> <em>(Submódulo)</em></td>
+      <td align="center">🟢 Completado</td>
+      <td align="left">Algoritmos de ordenación, complejidad y optimización</td>
+      <td align="center">C</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle" rowspan="3"><kbd>M2</kbd></td>
+      <td align="left"><a href="./M2/Python_Module_00"><strong>Python_Module_00</strong></a></td>
+      <td align="center">🟢 Completado</td>
+      <td align="left">Sintaxis básica, estructuras de control y tipos</td>
+      <td align="center">Python</td>
+    </tr>
+    <tr>
+      <td align="left"><a href="./M2/Python_Module_01"><strong>Python_Module_01</strong></a></td>
+      <td align="center">🔵 En curso</td>
+      <td align="left">Programación Orientada a Objetos (POO), clases</td>
+      <td align="center">Python</td>
+    </tr>
+    <tr>
+      <td align="left"><em>Próximos proyectos (M2)</em></td>
+      <td align="center">⚪ Pendiente</td>
+      <td align="left">Estructuras de datos, administración de sistemas, algoritmos</td>
+      <td align="center">Python / SysAdmin</td>
+    </tr>
+    <tr>
+      <td align="center" valign="middle"><kbd>Core</kbd></td>
+      <td align="left"><a href="./Super_libft"><strong>Super_libft</strong></a></td>
+      <td align="center">🟣 Evolutivo</td>
+      <td align="left">Biblioteca personal unificada y reutilización de código</td>
+      <td align="center">C</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Metodología y Normativa
 
