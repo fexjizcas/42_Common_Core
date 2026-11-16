@@ -56,7 +56,7 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
       <td align="center">C</td>
     </tr>
     <tr>
-      <td align="center" valign="middle" rowspan="3"><kbd>M2</kbd></td>
+      <td align="center" valign="middle" rowspan="2"><kbd>M2</kbd></td>
       <td align="left"><a href="./M2/Python_Module_00"><strong>Python_Module_00</strong></a></td>
       <td align="center">🟢 Completado</td>
       <td align="left">Sintaxis básica, estructuras de control y tipos</td>
@@ -67,12 +67,6 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
       <td align="center">🔵 En curso</td>
       <td align="left">Programación Orientada a Objetos (POO), clases</td>
       <td align="center">Python</td>
-    </tr>
-    <tr>
-      <td align="left"><em>Próximos proyectos (M2)</em></td>
-      <td align="center">⚪ Pendiente</td>
-      <td align="left">Estructuras de datos, administración de sistemas, algoritmos</td>
-      <td align="center">Python / SysAdmin</td>
     </tr>
     <tr>
       <td align="center" valign="middle"><kbd>Core</kbd></td>
