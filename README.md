@@ -50,7 +50,7 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
       <td align="center">C</td>
     </tr>
     <tr>
-      <td align="left"><a href="./M1/push_swap"><strong>push_swap</strong></a> <em>(Submódulo)</em></td>
+      <td align="left"><a href="https://github.com/jonamunozjim/M1_push_swap.git"><strong>push_swap</strong></a> <em>(Submódulo)</em></td>
       <td align="center">🟢 Completado</td>
       <td align="left">Algoritmos de ordenación, complejidad y optimización</td>
       <td align="center">C</td>
