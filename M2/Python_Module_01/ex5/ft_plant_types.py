@@ -27,9 +27,9 @@ class Flower(Plant):
         super().show()
         print(f" Color: {self.color}")
         if self._bloomed:
-            print(f"{self.name} is blooming beautifully!")
+            print(f" {self.name} is blooming beautifully!")
         else:
-            print(f"{self.name} has not bloomed yet")
+            print(f" {self.name} has not bloomed yet")
 
 
 class Tree(Plant):
@@ -42,7 +42,7 @@ class Tree(Plant):
 
     def show(self) -> None:
         super().show()
-        print(f" Trunk diameter: {self.trunk_diameter}")
+        print(f" Trunk diameter: {self.trunk_diameter}cm")
 
 
 class Vegetable(Plant):

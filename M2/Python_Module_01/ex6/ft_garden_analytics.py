@@ -14,8 +14,8 @@ class Plant:
         self._days = days
         self.stats: Plant.Stats = self.Stats()
 
-    def grow(self, days: int = 1) -> None:
-        self._height += 2.1 * days
+    def grow(self, days: float = 8.0) -> None:
+        self._height += days
         self.stats.total_grow += 1
 
     def age(self, days: int = 1) -> None:
@@ -48,9 +48,9 @@ class Flower(Plant):
         super().show()
         print(f" Color: {self.color}")
         if self._bloomed:
-            print(f"{self.name} is blooming beautifully!")
+            print(f" {self.name} is blooming beautifully!")
         else:
-            print(f"{self.name} has not bloomed yet")
+            print(f" {self.name} has not bloomed yet")
 
 
 class Tree(Plant):
@@ -73,7 +73,7 @@ class Tree(Plant):
 
     def show(self) -> None:
         super().show()
-        print(f" Trunk diameter: {self.trunk_diameter}")
+        print(f" Trunk diameter: {self.trunk_diameter}cm")
 
 
 class Seed(Flower):
@@ -124,8 +124,8 @@ if __name__ == "__main__":
     print("=== Seed")
     seed = Seed("Sunflower", 80.0, 45, "yellow")
     seed.show()
-    print("[asking the sunflower to grow, age and bloom]")
-    seed.grow()
+    print("[make sunflower to grow, age and bloom]")
+    seed.grow(30)
     seed.age(20)
     seed.bloom()
     seed.show()
