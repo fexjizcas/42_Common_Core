@@ -35,6 +35,7 @@ class Plant:
             self._days = days
             print(f"Age updated: {days} days")
 
+
 if __name__ == "__main__":
     print("=== Garden Security System ===")
     print("Plant created: ", end="")

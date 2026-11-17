@@ -6,7 +6,8 @@ class Plant:
             self.total_show = 0
 
         def display(self) -> None:
-            print(f"Stats: {self.total_grow} grow, {self.total_age} age, {self.total_show} show")
+            print(f"Stats: {self.total_grow} grow, "
+                  f"{self.total_age} age, {self.total_show} show")
 
     def __init__(self, name: str, height: float, days: int) -> None:
         self.name = name
@@ -36,14 +37,15 @@ class Plant:
 
 
 class Flower(Plant):
-    def __init__(self, name:str, height: float, days: int, color: str) -> None:
+    def __init__(self, name: str, height: float,
+                 days: int, color: str) -> None:
         super().__init__(name, height, days)
         self.color = color
         self._bloomed = False
-    
+
     def bloom(self) -> None:
         self._bloomed = True
-    
+
     def show(self) -> None:
         super().show()
         print(f" Color: {self.color}")
@@ -63,13 +65,16 @@ class Tree(Plant):
             super().display()
             print(f" {self.total_shade} shade")
 
-    def __init__(self,  name:str, height: float, days: int, trunk_diameter: float) -> None:
+    def __init__(self, name: str, height: float,
+                 days: int, trunk_diameter: float) -> None:
         super().__init__(name, height, days)
         self.trunk_diameter = trunk_diameter
-    
+
     def produce_shade(self) -> None:
-        self.stats.total_shade += 1
-        print(f"Tree {self.name} now produces a shade of {self._height:.1f}cm long and {self.trunk_diameter:.1f}cm wide.")
+        if isinstance(self.stats, Tree.Stats):
+            self.stats.total_shade += 1
+        print(f"Tree {self.name} now produces a shade of {self._height:.1f}cm"
+              f" long and {self.trunk_diameter:.1f}cm wide.")
 
     def show(self) -> None:
         super().show()
@@ -77,7 +82,8 @@ class Tree(Plant):
 
 
 class Seed(Flower):
-    def __init__(self,  name:str, height: float, days: int, color: str) -> None:
+    def __init__(self, name: str, height: float,
+                 days: int, color: str) -> None:
         super().__init__(name, height, days, color)
         self.seeds = 0
 
