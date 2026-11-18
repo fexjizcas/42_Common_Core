@@ -1,6 +1,6 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="42_white.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/imagenes/42_white.png">
     <source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg">
     <img alt="42 Logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" width="80">
   </picture>
@@ -77,6 +77,12 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
     </tr>
   </tbody>
 </table>
+
+### Holy Graph
+
+<p align="center">
+  <img src="assets/imagenes/grafico.png" alt="Grafico">
+</p>
 
 ## Metodología y Normativa
 
