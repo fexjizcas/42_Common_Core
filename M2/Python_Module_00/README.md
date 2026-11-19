@@ -1,3 +1,11 @@
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="../../assets/imagenes/42_white.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg">
+    <img alt="42 Logo" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/42_Logo.svg" width="80">
+  </picture>
+</div>
+
 # Python Module 00
 
 *Este proyecto ha sido creado como parte del currículo de 42 por fejimene.*
