@@ -64,7 +64,7 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
     </tr>
     <tr>
       <td align="left"><a href="./M2/Python_Module_01"><strong>Python_Module_01</strong></a></td>
-      <td align="center">🔵 En curso</td>
+      <td align="center">🟢 Completado</td>
       <td align="left">Programación Orientada a Objetos (POO), clases</td>
       <td align="center">Python</td>
     </tr>

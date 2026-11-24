@@ -1,13 +1,27 @@
 import sys
 
 if __name__ == "__main__":
-    av = sys.argv
-    ac = len(av)
-    for i in range(1, ac):
-        print(f"Scores processed: {av[i]}")
-    print(f"Total players: {ac - 1}")
-    print(f"Total score: {sum(av)}")
-    print(f"Average score: {(sum(av)) / ac}")
-    print(f"High score: {max(av)}")
-    print(f"Low score: {low(av)}")
-    print(f"Score range: {max(av) - min(avs)}")
+    print("=== Player Score Analytics ===")
+    if len(sys.argv) == 1:
+        print("No scores provided. Usage: python3 ft_score_analytics.py "
+              "<score1> <score2> ...")
+        print(" ")
+    else:
+        lst: list[int] = []
+        valid = True
+        for arg in sys.argv[1:]:
+            try:
+                lst.append(int(arg))
+            except ValueError:
+                print(f"Invalid parameter: '{arg}'")
+                print("No scores provided. Usage: python3 "
+                      "ft_score_analytics.py <score1> <score2> ...")
+                valid = False
+        if valid is True:
+            ac = len(sys.argv)
+            print(f"Total players: {lst}")
+            print(f"Total score: {sum(lst)}")
+            print(f"Average score: {(sum(lst)) / (ac - 1)}")
+            print(f"High score: {max(lst)}")
+            print(f"Low score: {min(lst)}")
+            print(f"Score range: {max(lst) - min(lst)}")
