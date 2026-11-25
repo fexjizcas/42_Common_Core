@@ -70,14 +70,14 @@ El directorio está estructurado de manera modular, dividiendo los entregables p
     </tr>
     <tr>
       <td align="left"><a href="./M2/Python_Module_02"><strong>Python_Module_02</strong></a></td>
-      <td align="center">🔵 En curso</td>
+      <td align="center">🟢 Completado</td>
       <td align="left">Manejo de excepciones (<code>try/except/finally</code>), <code>raise</code> y errores personalizados</td>
       <td align="center">Python</td>
     </tr>
     <tr>
       <td align="left"><a href="./M2/Python_Module_03"><strong>Python_Module_03</strong></a></td>
       <td align="center">🔵 En curso</td>
-      <td align="left">Herencia y polimorfismo</td>
+      <td align="left">Manipulación de listas, tuplas, conjuntos y diccionarios, generadores (<code>yield</code>) y <em>comprehensions</td>
       <td align="center">Python</td>
     </tr>
     <tr>

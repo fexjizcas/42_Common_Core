@@ -14,8 +14,6 @@ if __name__ == "__main__":
                 lst.append(int(arg))
             except ValueError:
                 print(f"Invalid parameter: '{arg}'")
-                print("No scores provided. Usage: python3 "
-                      "ft_score_analytics.py <score1> <score2> ...")
                 valid = False
         if valid is True:
             ac = len(sys.argv)
@@ -25,3 +23,6 @@ if __name__ == "__main__":
             print(f"High score: {max(lst)}")
             print(f"Low score: {min(lst)}")
             print(f"Score range: {max(lst) - min(lst)}")
+        else:
+            print("No scores provided. Usage: python3 "
+                  "ft_score_analytics.py <score1> <score2> ...")
